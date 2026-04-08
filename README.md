@@ -70,12 +70,28 @@ source cowrie-env/bin/activate
 cowrie start
 cowrie stop
 ```
+---
+
 ##Port Redirection
 ```bash
 sudo iptables -t nat -A PREROUTING -p tcp --dport 22 -j REDIRECT --to-port 2222
 ```
+
+---
+
 ##Logs & Monitoring
 ```bash
 cd ~/cowrie/var/log/cowrie
 tail -f cowrie.json
 ```
+---
+## Captured Data Includes:
+Source IP 
+Login attempts 
+Executed commands 
+File downloads 
+Session duration
+
+##Disclaimer
+This project is for educational and research purposes only.
+Do NOT expose this honeypot to the public internet without proper security controls.
